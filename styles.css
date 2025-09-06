@@ -1,27 +1,23 @@
 
-/* Custom extras on top of Tailwind */
-:root { --tsip: #95cd69; --ink: #0a0a0a; }
-.btn-primary {
-  position: relative; overflow: hidden;
-}
-.btn-primary::after {
-  content: ""; position: absolute; inset: 0; transform: translateX(-120%);
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,.25), transparent);
-  transition: transform .6s ease;
-}
-.btn-primary:hover::after { transform: translateX(120%); }
-.glow {
-  box-shadow: 0 10px 30px -10px rgba(149,205,105,.6);
-}
-.hero-blob {
-  position: absolute; top: -10%; left: 50%; width: 42rem; height: 42rem;
-  translate: -50% 0; background: rgba(149,205,105,.08); filter: blur(60px); border-radius: 9999px;
-  animation: breathe 6s ease-in-out infinite;
-}
-@keyframes breathe { 0%,100%{opacity:.6; transform: scale(1)} 50%{opacity:.85; transform: scale(1.05)} }
-details[open] summary .tw-plus { display: none; }
-details summary .tw-minus { display: none; }
-details[open] summary .tw-minus { display: inline; }
-.sticky-cta { position: sticky; bottom: 0; z-index: 40; }
-html { scroll-behavior: smooth; }
-.footer-legal a { color: #9ca3af; text-decoration: underline; }
+/* Tailwind helpers already loaded via CDN; this is custom polish */
+:root { --tsip:#95cd69; --ink:#0a0a0a; }
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;inset:0;transform:translateX(-120%);
+background:linear-gradient(120deg,transparent,rgba(255,255,255,.25),transparent);
+transition:transform .6s ease}
+.btn-primary:hover::after{transform:translateX(120%)}
+.glow{box-shadow:0 10px 30px -10px rgba(149,205,105,.6)}
+.hero-blob{position:absolute;top:-10%;left:50%;width:42rem;height:42rem;translate:-50% 0;
+background:rgba(149,205,105,.08);filter:blur(60px);border-radius:9999px;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:.85;transform:scale(1.05)}}
+details[open] summary .tw-plus{display:none}
+details summary .tw-minus{display:none}
+details[open] summary .tw-minus{display:inline}
+.sticky-cta{position:sticky;bottom:0;z-index:40}
+html{scroll-behavior:smooth}
+.footer-legal a{color:#9ca3af;text-decoration:underline}
+.badge{display:inline-flex;gap:.5rem;align-items:center;border:1px solid rgba(255,255,255,.12);
+background:#111;padding:.5rem .75rem;border-radius:.75rem;font-size:.875rem}
+.logo-row img{opacity:.7;transition:opacity .2s ease}
+.logo-row img:hover{opacity:1}
+.quote::before{content:"“";font-size:2.5rem;line-height:1;color:#9ca3af;margin-right:.25rem}
