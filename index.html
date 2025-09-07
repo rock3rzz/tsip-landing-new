@@ -9,7 +9,7 @@
 <body>
 
   <!-- Header -->
-  <header class="nav">
+  <header class="nav" id="top">
     <div class="container nav__row">
       <a href="#home" class="brand">
         <img src="logo.svg" alt="TSIP logo" class="brand__logo" />
@@ -44,10 +44,10 @@
     </div>
   </section>
 
-  <!-- How it works (alternating sections tied to your photos) -->
+  <!-- How it works -->
   <section id="how" class="flow">
     <div class="container">
-      <!-- Step 1 -->
+
       <article class="flow__row fade">
         <div class="flow__media">
           <img src="step1.jpg" alt="Reading the TSIP playbook on a tablet" />
@@ -64,7 +64,6 @@
         </div>
       </article>
 
-      <!-- Step 2 -->
       <article class="flow__row flow__row--reverse fade">
         <div class="flow__media">
           <img src="step2.jpg" alt="Packaging an offer on a call" />
@@ -77,11 +76,10 @@
             snapshot to show what “done” looks like. You’ll have an offer, scope, timeline, and price on a single page—
             something decision-makers can say yes to.
           </p>
-          <a href="#ebook" class="link">Preview the offer checklist →</a>
+          <a href="#testimonials" class="link">Preview wins from learners →</a>
         </div>
       </article>
 
-      <!-- Step 3 -->
       <article class="flow__row fade">
         <div class="flow__media">
           <img src="step3.jpg" alt="Closing a client at a cafe" />
@@ -93,9 +91,10 @@
             Follow the 14-day action plan. Run a tight discovery. Propose a scoped engagement with clear outcomes.
             You’ll have the exact words, assets, and cadence to land that first paid client—without unpaid internships.
           </p>
-          <a href="#testimonials" class="link">See what learners achieved →</a>
+          <a href="#testimonials" class="link">See testimonials →</a>
         </div>
       </article>
+
     </div>
   </section>
 
@@ -118,8 +117,7 @@
         <figure class="card fade">
           <div class="stars">★★★★★</div>
           <figcaption>
-            Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
-            Can’t recommend SIP enough.
+            Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.
             <span class="sig">Abd’ur-Rahman Stevens • Jan 21, 2025</span>
           </figcaption>
         </figure>
@@ -128,7 +126,6 @@
           <div class="stars">★★★★★</div>
           <figcaption>
             Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
-            Thanks to David for putting this together.
             <span class="sig">james w • Jul 22, 2024</span>
           </figcaption>
         </figure>
@@ -190,7 +187,7 @@
       <h2 class="section-title">Get the <span class="accent">FREE</span> Ebook Now</h2>
       <p class="section-sub">Enter your details to receive instant access and start your journey today.</p>
 
-      <form class="form" onsubmit="event.preventDefault(); alert('Demo: wire to your email tool');">
+      <form class="form" onsubmit="event.preventDefault(); alert('Demo: connect this to your email tool.');">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Your email" required />
         <button type="submit" class="btn btn--primary btn--xl">Send Me The Ebook</button>
@@ -234,8 +231,7 @@
 
         <details class="faq__item fade">
           <summary>Where does this lead?</summary>
-          <p>The ebook gets you moving fast. From there, our email curriculum guides you into the membership
-             where you’ll get live support, assets, and accountability.</p>
+          <p>The ebook gets you moving fast. From there, the email curriculum guides you into the membership for live support, assets, and accountability.</p>
         </details>
       </div>
     </div>
@@ -244,25 +240,22 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__row">
-      <div class="brand brand--footer">
+      <a href="#top" class="brand brand--footer">
         <img src="logo.svg" alt="" class="brand__logo" />
         <div class="brand__text">
           <strong class="brand__name">the safer internet project</strong>
           <span class="brand__tag">ship proof, not promises.</span>
         </div>
-      </div>
+      </a>
       <a href="https://learn.tsip.app/" target="_blank" rel="noopener" class="btn btn--ghost">Visit TSIP</a>
     </div>
   </footer>
 
   <script>
-    // Simple scroll-in animation
+    // Scroll-in animation
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('show');
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
     }, { threshold: 0.15 });
-
     document.querySelectorAll('.fade').forEach(el => io.observe(el));
   </script>
 </body>
