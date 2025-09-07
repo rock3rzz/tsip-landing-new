@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TSIP — Start Your Cybersecurity Consultancy</title>
-  <meta name="description" content="Book your roadmap call, get the FREE ebook, launch your cybersecurity consultancy with TSIP." />
+  <meta name="description" content="Book your roadmap call, get the FREE ebook, and launch your cybersecurity consultancy with TSIP." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -12,7 +12,6 @@
 </head>
 
 <body class="bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white antialiased">
-  <!-- Header -->
   <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
     <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
@@ -35,28 +34,32 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="relative overflow-hidden text-center py-28 px-6">
-      <div class="hero-blob -z-10"></div>
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight max-w-5xl mx-auto">
-        Start Your Cybersecurity Consultancy <span class="text-[#95cd69]">Now</span>
-      </h1>
-      <p class="mt-8 text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-        One roadmap call is all it takes: define a sellable offer, lock in your first client plan, and access deliverables that prove your expertise. The FREE ebook is included to kickstart your journey.
-      </p>
-      <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#book" onclick="Calendly.initPopupWidget({url: 'CALENDLY_LINK_PLACEHOLDER'}); return false;"
-           class="btn-primary px-10 py-4 rounded-xl bg-[#95cd69] text-[#0a0a0a] font-semibold text-lg glow transition">
-           Book My Roadmap Call
-        </a>
-        <a href="#form" class="px-10 py-4 rounded-xl border border-white/20 font-semibold text-lg hover:border-[#95cd69] hover:text-[#95cd69] transition">
-          Get FREE Ebook
-        </a>
+    <!-- HERO with photo background + overlay -->
+    <section id="home"
+      class="relative min-h-[70vh] md:min-h-[78vh] flex items-center justify-center text-center px-6 bg-black"
+      style="background-image:url('hero.jpg'); background-size:cover; background-position:center;">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      <div class="relative z-10 max-w-5xl">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+          Start Your Cybersecurity Consultancy <span class="text-[#95cd69]">Now</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/80">
+          One roadmap call is all it takes: define a sellable offer, lock your first client plan, and access deliverables that prove your expertise. The FREE ebook is included.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#book" onclick="Calendly.initPopupWidget({url:'CALENDLY_LINK_PLACEHOLDER'}); return false;"
+             class="btn-primary px-10 py-4 rounded-xl bg-[#95cd69] text-[#0a0a0a] font-semibold text-lg glow transition">
+             Book My Roadmap Call
+          </a>
+          <a href="#form" class="px-10 py-4 rounded-xl border border-white/20 font-semibold text-lg hover:border-[#95cd69] hover:text-[#95cd69] transition">
+            Get FREE Ebook
+          </a>
+        </div>
+        <div class="mt-4 text-white/60 text-sm">No payment required to book</div>
       </div>
-      <div class="mt-8 text-white/60 text-sm">No payment required to book</div>
     </section>
 
-    <!-- How it works -->
+    <!-- HOW IT WORKS -->
     <section id="how" class="py-24 bg-white/[0.03] px-6">
       <div class="mx-auto max-w-6xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold">How it works</h2>
@@ -81,7 +84,16 @@
       </div>
     </section>
 
-    <!-- Testimonials (trimmed, strong) -->
+    <!-- PHOTO STRIP (three consistent images) -->
+    <section class="py-12 px-6 bg-white/[0.03]">
+      <div class="mx-auto max-w-6xl grid md:grid-cols-3 gap-4">
+        <img src="strip1.jpg" alt="Working session" class="rounded-xl border border-white/10 object-cover w-full h-56 md:h-64">
+        <img src="strip2.jpg" alt="Call prep" class="rounded-xl border border-white/10 object-cover w-full h-56 md:h-64">
+        <img src="strip3.jpg" alt="Delivery work" class="rounded-xl border border-white/10 object-cover w-full h-56 md:h-64">
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS (with optional avatars) -->
     <section id="testimonials" class="py-24 px-6">
       <div class="mx-auto max-w-6xl">
         <div class="text-center">
@@ -90,34 +102,70 @@
         </div>
         <div class="mt-12 grid md:grid-cols-3 gap-6">
           <figure class="rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/10 p-8 shadow-md">
-            <div class="font-semibold">Randy B</div>
-            <div class="text-yellow-400 mt-1">★★★★★</div>
+            <div class="flex items-center gap-3">
+              <img src="randy.jpg" alt="Randy B" class="h-10 w-10 rounded-full object-cover border border-white/10">
+              <div>
+                <div class="font-semibold">Randy B</div>
+                <div class="text-xs text-white/50">★★★★★ · Sep 23, 2024</div>
+              </div>
+            </div>
             <blockquote class="mt-4 text-white/80 leading-relaxed">
               “David gave detailed, thoughtful responses to all my questions and tailored his advice to my situation. The SIP Systems Audit Template was worth every penny.”
             </blockquote>
-            <figcaption class="mt-4 text-xs text-white/50">Sep 23, 2024</figcaption>
           </figure>
 
           <figure class="rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/10 p-8 shadow-md">
-            <div class="font-semibold">Hayley Woodhouse</div>
-            <div class="text-yellow-400 mt-1">★★★★★</div>
+            <div class="flex items-center gap-3">
+              <img src="hayley.jpg" alt="Hayley Woodhouse" class="h-10 w-10 rounded-full object-cover border border-white/10">
+              <div>
+                <div class="font-semibold">Hayley Woodhouse</div>
+                <div class="text-xs text-white/50">★★★★★ · Sep 3, 2024</div>
+              </div>
+            </div>
             <blockquote class="mt-4 text-white/80 leading-relaxed">
               “The Safer Internet Project has been the best thing for me. David is superb — helped me gain confidence and contacts. Highly recommend SIP to move your career forward in Cyber.”
             </blockquote>
-            <figcaption class="mt-4 text-xs text-white/50">Sep 3, 2024</figcaption>
           </figure>
 
           <figure class="rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/10 p-8 shadow-md">
-            <div class="font-semibold">Kunal Gupte</div>
-            <div class="text-yellow-400 mt-1">★★★★★</div>
+            <div class="flex items-center gap-3">
+              <img src="kunal.jpg" alt="Kunal Gupte" class="h-10 w-10 rounded-full object-cover border border-white/10">
+              <div>
+                <div class="font-semibold">Kunal Gupte</div>
+                <div class="text-xs text-white/50">★★★★★ · May 31, 2024</div>
+              </div>
+            </div>
             <blockquote class="mt-4 text-white/80 leading-relaxed">
               “Not only am I learning the most effective way to conduct pentests and write reports, I’m getting invaluable training on how to gain clients as a freelancer. SIP is awesome.”
             </blockquote>
-            <figcaption class="mt-4 text-xs text-white/50">May 31, 2024</figcaption>
           </figure>
         </div>
         <div class="mt-10 text-center">
           <a href="https://learn.tsip.app/reviews" class="text-[#95cd69] font-semibold hover:underline">See more reviews →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER / ABOUT -->
+    <section id="founder" class="py-24 px-6">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="mx-auto w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border border-white/15 shadow-lg">
+          <img src="founder-portrait.jpg" alt="David Lee, The Safer Internet Project" class="w-full h-full object-cover">
+        </div>
+        <h3 class="mt-6 text-2xl md:text-3xl font-bold text-[#95cd69]">David Lee</h3>
+        <div class="mt-4 space-y-4 text-white/80 leading-relaxed text-sm md:text-base">
+          <p>18+ years in IT and security. I package real skills into offers founders actually buy, then help you sell them without fluff.</p>
+          <p>Built a 60k+ YouTube audience sharing day-to-day security work. At TSIP I turn that into roadmaps, redacted reports, discovery scripts, and pricing you can use on calls this month.</p>
+          <p>CEO, The Safer Internet Project. My goal: help the next wave of security pros land paid engagements — fast, ethical, repeatable.</p>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#book" onclick="Calendly.initPopupWidget({url:'CALENDLY_LINK_PLACEHOLDER'}); return false;"
+             class="px-8 py-4 rounded-xl bg-[#95cd69] text-[#0a0a0a] font-semibold glow">
+            Book My Roadmap Call
+          </a>
+          <a href="https://learn.tsip.app/" class="px-8 py-4 rounded-xl border border-white/15 text-white/90 hover:border-[#95cd69] hover:text-[#95cd69]">
+            Explore TSIP
+          </a>
         </div>
       </div>
     </section>
@@ -155,7 +203,7 @@
       </div>
     </section>
 
-    <!-- Lead Form -->
+    <!-- LEAD FORM -->
     <section id="form" class="py-24 bg-white/[0.03] px-6">
       <div class="mx-auto max-w-3xl">
         <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] p-10 shadow-2xl">
@@ -166,8 +214,6 @@
                 Fill this form to get the FREE ebook and confirm your 1:1 roadmap call slot.
               </p>
             </div>
-
-            <!-- Mailchimp hosted form -->
             <form class="mt-6 md:mt-0 w-full md:max-w-sm space-y-4" method="post" target="_blank" novalidate
               action="MAILCHIMP_ACTION_PLACEHOLDER">
               <input type="text" name="FNAME" placeholder="Your full name" class="w-full px-4 py-3 rounded-md bg-[#0f0f10] border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#95cd69]" />
@@ -200,13 +246,12 @@
   <!-- Mobile sticky CTA -->
   <div class="sticky-cta bg-black/70 backdrop-blur border-t border-white/10 py-3 px-4 md:hidden">
     <div class="max-w-7xl mx-auto flex gap-3">
-      <a href="#book" onclick="Calendly.initPopupWidget({url: 'CALENDLY_LINK_PLACEHOLDER'}); return false;"
+      <a href="#book" onclick="Calendly.initPopupWidget({url:'CALENDLY_LINK_PLACEHOLDER'}); return false;"
          class="flex-1 text-center px-4 py-3 rounded-lg bg-[#95cd69] text-[#0a0a0a] font-semibold">Book Call</a>
       <a href="#form" class="flex-1 text-center px-4 py-3 rounded-lg border border-white/20 font-semibold">Get FREE Ebook</a>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer-legal text-center text-xs text-white/50 py-10">
     <div class="max-w-7xl mx-auto px-6">© <span id="year"></span> The Safer Internet Project ·
       <a href="#"> Privacy</a> · <a href="#"> Terms</a></div>
