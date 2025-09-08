@@ -8,255 +8,330 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="nav" id="top">
-    <div class="container nav__row">
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="nav__inner">
       <a href="#home" class="brand">
-        <img src="logo.svg" alt="TSIP logo" class="brand__logo" />
+        <img src="logo.svg" alt="TSIP lock logo" class="brand__logo" />
         <div class="brand__text">
-          <strong class="brand__name">The Safer Internet Project</strong>
+          <strong class="brand__title">the safer internet project</strong>
           <span class="brand__tag">ship proof, not promises.</span>
         </div>
       </a>
 
-      <nav class="nav__links">
+      <nav class="menu">
         <a href="#how">How it works</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn--pill" href="https://learn.tsip.app/" target="_blank" rel="noopener">The Safer Internet Project</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero__bg" style="background-image:url('hero.jpg')"></div>
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero" style="--hero:url('hero.jpg')">
     <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <h1 class="hero__title">Start Your Cybersecurity Consultancy <span class="accent">Now</span></h1>
-      <p class="hero__sub">
-        Get the <strong>FREE ebook</strong> with seven sellable engagements, discovery scripts, redacted report snapshots, and pricing ranges. Proof that sells—no fluff.
+    <div class="hero__inner container">
+      <h1 class="hero__title">
+        Start Your Cybersecurity Consultancy <span class="accent">Now</span>
+      </h1>
+      <p class="hero__lead">
+        Get the <strong>FREE ebook</strong> with 7 proven engagements, discovery scripts,
+        redacted reports, and pricing ranges. Proof that sells — not promises.
       </p>
-      <div class="hero__ctas">
+      <div class="cta-row">
         <a href="#ebook" class="btn btn--primary">Get FREE Ebook</a>
       </div>
-      <p class="hero__note">No payment required to download.</p>
+      <p class="hero__micro">No payment required to download.</p>
+    </div>
+    <div class="grain"></div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS (with photos) ===================== -->
+  <section id="how" class="section container">
+    <h2 class="section__title">How it works</h2>
+    <p class="section__kicker">From no portfolio to first proof-of-work in 3 steps.</p>
+
+    <div class="steps">
+      <article class="step card reveal">
+        <img src="step1.jpg" alt="Using the toolkit" class="step__img" />
+        <div class="step__body">
+          <div class="step__num">1</div>
+          <h3 class="step__title">Get the free ebook</h3>
+          <p class="step__desc">
+            This playbook turns raw skills into <em>sellable</em> offers: scoped packages, snapshots you can show,
+            discovery questions, and pricing anchors. No fluff. No “someday.” A path you can run this week.
+          </p>
+        </div>
+      </article>
+
+      <article class="step card reveal">
+        <img src="step2.jpg" alt="Outreach and first call" class="step__img" />
+        <div class="step__body">
+          <div class="step__num">2</div>
+          <h3 class="step__title">Book discovery calls</h3>
+          <p class="step__desc">
+            Use battle-tested openers and short discovery. You’ll know exactly what to say, what to capture,
+            and how to position your proof so decision-makers say “yes”.
+          </p>
+        </div>
+      </article>
+
+      <article class="step card reveal">
+        <img src="step3.jpg" alt="Close your first engagement" class="step__img" />
+        <div class="step__body">
+          <div class="step__num">3</div>
+          <h3 class="step__title">Book calls and close</h3>
+          <p class="step__desc">
+            Follow the 14-day plan. Run discovery. Propose a scoped engagement. Land your first paid client.
+            Momentum beats motivation. You’ll have the exact words and assets to execute.
+          </p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- How it works -->
-  <section id="how" class="flow">
+  <!-- ===================== REVIEWS (horizontal marquee) ===================== -->
+  <section id="testimonials" class="section section--alt">
     <div class="container">
+      <h2 class="section__title">What Learners Say</h2>
+      <p class="section__kicker">
+        Real stories from early-career cyber professionals who joined TSIP.
+      </p>
 
-      <article class="flow__row fade">
-        <div class="flow__media">
-          <img src="step1.jpg" alt="Reading the TSIP playbook on a tablet" />
+      <!-- Infinite marquee row -->
+      <div class="review-wall">
+        <div class="review-track">
+          <!-- duplicate set for seamless loop -->
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Excellent career coaching with David. Bought the SIP Systems Audit Template—
+              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
+            </p>
+            <span class="review__meta">Randy B · Sep 23, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
+              Can’t recommend SIP enough.
+            </p>
+            <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
+              Thanks to David for putting this together.
+            </p>
+            <span class="review__meta">james w · Jul 22, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
+            </p>
+            <span class="review__meta">Hayley Woodhouse</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
+              The team at SIP is awesome.
+            </p>
+            <span class="review__meta">Kunal Gupte · May 31, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Labs and report writing gave me real-world experience. Confidence up, marketability up.
+              More opportunities opened.
+            </p>
+            <span class="review__meta">Michelle King · Oct 4, 2023</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Zero to two paid clients in 10 days. Practical, step-by-step plan.
+            </p>
+            <span class="review__meta">Ravi — Sysadmin</span>
+          </article>
+
+          <!-- duplicated set starts here -->
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Excellent career coaching with David. Bought the SIP Systems Audit Template—
+              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
+            </p>
+            <span class="review__meta">Randy B · Sep 23, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
+              Can’t recommend SIP enough.
+            </p>
+            <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
+              Thanks to David for putting this together.
+            </p>
+            <span class="review__meta">james w · Jul 22, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
+            </p>
+            <span class="review__meta">Hayley Woodhouse</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
+              The team at SIP is awesome.
+            </p>
+            <span class="review__meta">Kunal Gupte · May 31, 2024</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Labs and report writing gave me real-world experience. Confidence up, marketability up.
+              More opportunities opened.
+            </p>
+            <span class="review__meta">Michelle King · Oct 4, 2023</span>
+          </article>
+
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Zero to two paid clients in 10 days. Practical, step-by-step plan.
+            </p>
+            <span class="review__meta">Ravi — Sysadmin</span>
+          </article>
         </div>
-        <div class="flow__copy">
-          <div class="chip">1 — Get the FREE ebook</div>
-          <h2>Stuck in the course loop? Take the shortcut.</h2>
-          <p>
-            You’ve done labs and certs—but nobody’s paying yet. This playbook turns raw skills into <em>sellable</em> offers:
-            seven scoped engagements, snapshots you can show, the exact discovery questions to ask, and pricing anchors.
-            No fantasy. A path you can run this week.
-          </p>
-          <a href="#ebook" class="btn btn--ghost">Send me the ebook</a>
-        </div>
-      </article>
-
-      <article class="flow__row flow__row--reverse fade">
-        <div class="flow__media">
-          <img src="step2.jpg" alt="Packaging an offer on a call" />
-        </div>
-        <div class="flow__copy">
-          <div class="chip">2 — Productize one offer</div>
-          <h2>Turn tinkering into a business-ready service.</h2>
-          <p>
-            Pick one of the seven offers, use the discovery prompts to frame the problem, then pull a redacted report
-            snapshot to show what “done” looks like. You’ll have an offer, scope, timeline, and price on a single page—
-            something decision-makers can say yes to.
-          </p>
-          <a href="#testimonials" class="link">Preview wins from learners →</a>
-        </div>
-      </article>
-
-      <article class="flow__row fade">
-        <div class="flow__media">
-          <img src="step3.jpg" alt="Closing a client at a cafe" />
-        </div>
-        <div class="flow__copy">
-          <div class="chip">3 — Book calls and close</div>
-          <h2>Momentum beats motivation. Close your first engagement.</h2>
-          <p>
-            Follow the 14-day action plan. Run a tight discovery. Propose a scoped engagement with clear outcomes.
-            You’ll have the exact words, assets, and cadence to land that first paid client—without unpaid internships.
-          </p>
-          <a href="#testimonials" class="link">See testimonials →</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="testis">
-    <div class="container">
-      <h2 class="section-title">What Learners Say</h2>
-      <p class="section-sub">Real stories from early-career cyber professionals who joined TSIP.</p>
-
-      <div class="testis__grid">
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Excellent career coaching with David. Bought the SIP Systems Audit Template—<strong>17 sheets in one</strong>.
-            Extremely thorough and worth it.
-            <span class="sig">Randy B • Sep 23, 2024</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.
-            <span class="sig">Abd’ur-Rahman Stevens • Jan 21, 2025</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
-            <span class="sig">james w • Jul 22, 2024</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            The best thing ever for me. More confidence, practical experience, and a real path into paid work.
-            <span class="sig">Hayley Woodhouse</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Way beyond expectations. Also learned how to gain clients as a freelancer. The team at SIP is awesome.
-            <span class="sig">Kunal Gupte • May 31, 2024</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Labs and report writing gave me real-world experience. Confidence up, marketability up. More opportunities opened.
-            <span class="sig">Michelle King • Oct 4, 2023</span>
-          </figcaption>
-        </figure>
-
-        <figure class="card fade">
-          <div class="stars">★★★★★</div>
-          <figcaption>
-            Zero to two paid clients in 10 days. Practical, step-by-step plan.
-            <span class="sig">Ravi — Sysadmin</span>
-          </figcaption>
-        </figure>
       </div>
 
       <div class="center">
-        <a href="https://testimonial.to/the-safer-internet-project" target="_blank" rel="noopener" class="btn btn--ghost">Read all reviews →</a>
+        <a class="btn btn--ghost" href="https://testimonial.to/the-safer-internet-project" target="_blank" rel="noopener">
+          Read all reviews →
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Founder -->
-  <section class="founder">
-    <div class="container founder__wrap fade">
-      <img class="founder__avatar" src="david.jpg" alt="David Lee" />
+  <!-- ===================== FOUNDER ===================== -->
+  <section class="section container founder">
+    <div class="founder__media reveal">
+      <img src="founder.jpg" alt="David Lee" class="founder__img" />
+      <span class="ring"></span>
+    </div>
+
+    <div class="founder__body reveal">
       <h3 class="founder__name">David Lee</h3>
       <p class="founder__bio">
-        18+ years in IT & security. CEO of TSIP. My job is to help the next wave of cyber professionals turn
-        skills into paid consulting—fast, ethical, repeatable.
+        For over 18 years I’ve worked across the IT industry, building the skills to deliver projects quickly,
+        efficiently, and with a practical, down-to-earth approach. My focus has always been cybersecurity and
+        automation—areas where clarity and precision matter most.
+      </p>
+      <p class="founder__bio">
+        Along the way I’ve built a YouTube community of more than 60,000 viewers who follow the real day-to-day
+        of an IT professional and look to break into the field the right way. As CEO of TSIP, my job is to help
+        the next wave of cyber professionals turn skills into paid consulting—fast, ethical, repeatable.
       </p>
     </div>
   </section>
 
-  <!-- Ebook CTA -->
-  <section id="ebook" class="cta">
-    <div class="container">
-      <h2 class="section-title">Get the <span class="accent">FREE</span> Ebook Now</h2>
-      <p class="section-sub">Enter your details to receive instant access and start your journey today.</p>
-
-      <form class="form" onsubmit="event.preventDefault(); alert('Demo: connect this to your email tool.');">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="btn btn--primary btn--xl">Send Me The Ebook</button>
-      </form>
-
-      <p class="muted">We respect your inbox. Unsubscribe anytime.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="container">
-      <h2 class="section-title">FAQ</h2>
-
-      <div class="faq__list">
-        <details class="faq__item fade">
-          <summary>Do I need prior clients to get value?</summary>
-          <p>No. The ebook includes sanitized deliverables and discovery scripts you can use as proof-of-work
-            even without case studies.</p>
-        </details>
-
-        <details class="faq__item fade">
-          <summary>Is the ebook really free?</summary>
-          <p>Yes. Enter your email and you’ll receive instant access. No payment, no nonsense.</p>
-        </details>
-
-        <details class="faq__item fade">
-          <summary>How fast can I land a client?</summary>
-          <p>Most who follow the plan see movement within 2–4 weeks. Some closed a paid call in 10 days.</p>
-        </details>
-
-        <details class="faq__item fade">
-          <summary>What’s inside exactly?</summary>
-          <p>7 sellable engagements, discovery questions, redacted report snapshots, outreach scripts, and pricing ranges.</p>
-        </details>
-
-        <details class="faq__item fade">
-          <summary>Who is TSIP for?</summary>
-          <p>Sysadmins, SOC juniors, students, bootcamp grads, and freelancers who want to turn skills into income—without unpaid internships.</p>
-        </details>
-
-        <details class="faq__item fade">
-          <summary>Where does this lead?</summary>
-          <p>The ebook gets you moving fast. From there, the email curriculum guides you into the membership for live support, assets, and accountability.</p>
-        </details>
+  <!-- ===================== FREE EBOOK CTA ===================== -->
+  <section id="ebook" class="cta-ebook section">
+    <div class="container cta-ebook__inner">
+      <div class="cta-ebook__copy reveal">
+        <h2 class="section__title">Get the <span class="accent">FREE</span> Ebook Now</h2>
+        <p class="section__kicker">
+          Enter your email to receive instant access and start your journey today.
+        </p>
       </div>
+
+      <form class="form reveal" onsubmit="event.preventDefault(); alert('Demo: connect this to Mailchimp.');">
+        <input type="text" required placeholder="Your name" />
+        <input type="email" required placeholder="Your email" />
+        <button type="submit" class="btn btn--primary">Send Me The Ebook</button>
+        <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
+      </form>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="section container">
+    <h2 class="section__title">FAQ</h2>
+
+    <details class="faq card reveal">
+      <summary>Do I need prior clients to get value?</summary>
+      <p>
+        No. The ebook includes sanitized deliverables and discovery scripts you can use as proof-of-work even
+        without case studies.
+      </p>
+    </details>
+
+    <details class="faq card reveal">
+      <summary>Is the ebook really free?</summary>
+      <p>Yes. Enter your email and you’ll receive instant access. No payment, no nonsense.</p>
+    </details>
+
+    <details class="faq card reveal">
+      <summary>How fast can I land a client?</summary>
+      <p>Most who follow the plan see movement within 2–4 weeks. Some closed a paid call in 10 days.</p>
+    </details>
+
+    <details class="faq card reveal">
+      <summary>What’s inside exactly?</summary>
+      <p>
+        7 sellable engagements, discovery questions, redacted report snapshots, outreach scripts,
+        and pricing ranges.
+      </p>
+    </details>
+
+    <details class="faq card reveal">
+      <summary>Who is TSIP for?</summary>
+      <p>
+        Sysadmins, SOC juniors, students, bootcamp grads, and freelancers who want to turn skills into income—
+        without unpaid internships.
+      </p>
+    </details>
+  </section>
+
   <footer class="footer">
-    <div class="container footer__row">
-      <a href="#top" class="brand brand--footer">
-        <img src="logo.svg" alt="" class="brand__logo" />
-        <div class="brand__text">
-          <strong class="brand__name">the safer internet project</strong>
-          <span class="brand__tag">ship proof, not promises.</span>
-        </div>
-      </a>
-      <a href="https://learn.tsip.app/" target="_blank" rel="noopener" class="btn btn--ghost">Visit TSIP</a>
+    <div class="container footer__inner">
+      <img src="logo.svg" alt="" class="footer__logo" />
+      <div class="footer__copy">
+        <strong>the safer internet project</strong>
+        <span>ship proof, not promises.</span>
+      </div>
     </div>
   </footer>
 
+  <!-- tiny JS for reveal on scroll (keeps CSS clean) -->
   <script>
-    // Scroll-in animation
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade').forEach(el => io.observe(el));
+      entries.forEach(e => e.isIntersecting && e.target.classList.add('in-view'));
+    }, {threshold: 0.15});
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
