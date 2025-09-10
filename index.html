@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
   <header class="nav">
     <div class="nav__inner">
       <a href="#home" class="brand">
@@ -28,7 +27,6 @@
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
   <section id="home" class="hero" style="--hero:url('hero.jpg')">
     <div class="hero__overlay"></div>
     <div class="hero__inner container">
@@ -47,7 +45,6 @@
     <div class="grain"></div>
   </section>
 
-  <!-- ===================== HOW IT WORKS (with photos) ===================== -->
   <section id="how" class="section container">
     <h2 class="section__title">How it Works</h2>
     <p class="section__kicker">From No Portfolio to First Proof of Work in 3 steps.</p>
@@ -91,7 +88,6 @@
     </div>
   </section>
 
-  <!-- ===================== REVIEWS (horizontal marquee) ===================== -->
   <section id="testimonials" class="section section--alt">
     <div class="container">
       <h2 class="section__title">What Learners Say</h2>
@@ -236,7 +232,6 @@
     </div>
   </section>
 
-  <!-- ===================== FOUNDER ===================== -->
   <section class="section container founder">
     <div class="founder__media reveal">
       <img src="founder.jpg" alt="David Lee" class="founder__img" />
@@ -267,14 +262,8 @@
         </p>
       </div>
 
-   <form
-  action="https://saferinternetproject.us21.list-manage.com/subscribe/post?u=e91085aeaa65622a0cb3b4e9e&id=2726077c0f&f_id=00ab45e6f0"
-  method="post"
-  class="form reveal"
-  target="_self"
-  novalidate
->
-  <!-- Name field -->
+   <form id="mc-form" class="form reveal" novalidate>
+  <!-- Name -->
   <input
     type="text"
     name="MMERGE7"
@@ -282,7 +271,7 @@
     autocomplete="name"
   />
 
-  <!-- Email field -->
+  <!-- Email -->
   <input
     type="email"
     name="EMAIL"
@@ -291,23 +280,15 @@
     autocomplete="email"
   />
 
-  <div style="position:absolute; left:-5000px" aria-hidden="true">
-    <input
-      type="text"
-      name="b_e91085aeaa65622a0cb3b4e9e_2726077c0f"
-      tabindex="-1"
-      value=""
-    />
-  </div>
-
-  <!-- Submit button -->
+  <!-- Submit -->
   <button type="submit" class="btn btn--primary">
     Send Me The Ebook
   </button>
 
-  <small class="muted">
-    We respect your inbox. Unsubscribe anytime.
-  </small>
+  <small class="muted">We respect your inbox. Unsubscribe anytime.</small>
+
+  <!-- Inline status message -->
+  <div id="mc-status" aria-live="polite" style="margin-top:12px"></div>
 </form>
 
     </div>
@@ -369,5 +350,67 @@
 
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+  <script>
+(function () {
+  // Your Mailchimp identifiers (from your embed code)
+  const MC_URL = 'https://saferinternetproject.us21.list-manage.com/subscribe/post-json';
+  const MC_U   = 'e91085aeaa65622a0cb3b4e9e';  // u=
+  const MC_ID  = '2726077c0f';                   // id=
+
+  const form   = document.getElementById('mc-form');
+  const status = document.getElementById('mc-status');
+
+  function setStatus(msg, ok) {
+    status.textContent = msg;
+    status.style.padding = '10px 12px';
+    status.style.borderRadius = '10px';
+    status.style.display = 'inline-block';
+    status.style.background = ok ? 'rgba(149,205,105,0.12)' : 'rgba(255,102,102,0.12)';
+    status.style.color = ok ? '#95cd69' : '#ff6666';
+    status.style.boxShadow = ok
+      ? '0 6px 24px rgba(149,205,105,0.15)'
+      : '0 6px 24px rgba(255,102,102,0.15)';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const email = (data.get('EMAIL') || '').trim();
+    if (!email) { setStatus('Please enter a valid email.', false); return; }
+
+    setStatus('Sending…', true);
+
+    // Build query string for Mailchimp JSONP
+    const qs = new URLSearchParams();
+    qs.set('u', MC_U);
+    qs.set('id', MC_ID);
+    qs.set('c', 'mcCallback'); // JSONP callback name
+    for (const [k, v] of data.entries()) qs.set(k, v);
+
+    // Define global callback Mailchimp will call
+    window.mcCallback = function (resp) {
+      if (resp.result === 'success') {
+        setStatus('Thank you! Check your inbox for the ebook.', true);
+        form.reset();
+      } else {
+        // Clean any HTML that Mailchimp may return
+        const msg = (resp.msg || 'Something went wrong').replace(/<[^>]*>/g, '');
+        setStatus(msg, false);
+      }
+      if (jsonp && jsonp.parentNode) jsonp.parentNode.removeChild(jsonp);
+    };
+
+    // Inject the JSONP script
+    const jsonp = document.createElement('script');
+    jsonp.src = MC_URL + '?' + qs.toString();
+    jsonp.onerror = function () {
+      setStatus('Network error. Please try again.', false);
+    };
+    document.body.appendChild(jsonp);
+  });
+})();
+</script>
+
 </body>
 </html>
