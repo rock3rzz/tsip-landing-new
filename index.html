@@ -19,10 +19,14 @@
         </div>
       </a>
       
-<div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('open')">
-  ☰
-</div>
-
+<button class="hamburger" aria-controls="site-menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+<nav id="site-menu" class="menu">
+  <a href="#how">How It Works</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#faq">FAQ</a>
+</nav>
       <nav class="menu">
         <a href="#how">How It Works</a>
         <a href="#testimonials">Testimonials</a>
@@ -430,6 +434,16 @@
     document.body.appendChild(jsonp);
   });
 })();
+</script>
+<script>
+  const burger = document.querySelector('.hamburger');
+  const menu   = document.getElementById('site-menu');
+
+  burger?.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 </script>
 
 </body>
