@@ -94,11 +94,16 @@ body{
   border:1px solid var(--stroke); border-radius:18px; box-shadow:var(--shadow);
 }
 .step{display:flex; flex-direction:column}
-.step__img{
-  width:100%; height:clamp(180px,28vw,240px);
-  object-fit:cover; object-position:center; /* center faces */
-  border-top-left-radius:18px; border-top-right-radius:18px
+.step__img {
+  width: 100%;
+  height: auto;              /* let images scale naturally */
+  aspect-ratio: 16/9;        /* consistent shape across all cards */
+  object-fit: cover;
+  object-position: center top; /* bias toward face area */
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
+
 .step__body{padding:clamp(16px,2.8vw,22px)}
 .step__num{width:34px; height:34px; border-radius:50%; background:rgba(149,205,105,.16); color:var(--accent);
            display:grid; place-items:center; font-weight:800; margin-bottom:10px}
