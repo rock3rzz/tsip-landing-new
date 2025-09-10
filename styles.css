@@ -142,41 +142,6 @@ body{
 .footer__logo{width:30px; height:30px}
 .footer__copy span{display:block; color:var(--muted); font-size:12px}
 
-/* HAMBURGER MENU FOR MOBILE */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #000;       /* black background for dropdown */
-    position: absolute;
-    top: 60px;              /* adjust to your header height */
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .menu.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block; /* show burger only on mobile */
-  }
-
-  .menu a {
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-}
 /* Base: hide burger on desktop */
 .hamburger {
   display: none;
@@ -244,6 +209,129 @@ body{
     max-height: none;
     background: none;
     padding: 0;
+  }
+}
+/* -------------------------------------
+   SPACING + TYPOGRAPHY COMFORT OVERRIDES
+   ------------------------------------- */
+
+/* Give everything breathing room on all screens */
+.container { padding-inline: clamp(16px, 4vw, 28px); }
+
+.nav__inner { padding: 12px clamp(16px, 4vw, 28px); }
+
+.hero {
+  min-height: 86svh;            /* more height so hero breathes */
+}
+.hero__inner {
+  padding-inline: clamp(16px, 4vw, 28px);   /* fix “text touching edges” on mobile */
+}
+.hero__title { margin: 0 0 18px; }
+.hero__lead  { margin: 0 auto 28px; }
+
+/* Comfortable vertical rhythm across sections */
+.section { padding-block: clamp(56px, 8vw, 92px); }
+
+/* Cards + images: less cramped on phones, tidy on desktop */
+.step__img  { height: clamp(180px, 28vw, 240px); }
+.step__body { padding: clamp(16px, 2.8vw, 22px); }
+.card       { border-radius: 18px; }
+
+/* Founder + CTA spacing */
+.founder       { gap: clamp(20px, 4vw, 32px); }
+.founder__bio  { margin: 0 0 14px; }
+.cta-ebook__inner { gap: clamp(16px, 4vw, 28px); }
+
+/* Inputs + buttons: consistent touch targets */
+.form input,
+.btn { padding: clamp(12px, 2.8vw, 14px) clamp(14px, 4vw, 22px); }
+
+/* Footer breathing room */
+.footer { padding-block: clamp(36px, 6vw, 64px); }
+
+/* Respect iOS safe area so content never hugs the edge */
+@supports(padding:max(0px)) {
+  .nav__inner,
+  .hero__inner,
+  .container,
+  .footer__inner {
+    padding-inline: max(16px, env(safe-area-inset-left));
+  }
+}
+
+/* -------------------------------------
+   HAMBURGER + MENU CLEANUP
+   (single definition, smoother mobile dropdown)
+   ------------------------------------- */
+
+/* Base: hide burger on desktop */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 28px;
+  height: 22px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+/* Morph to X */
+.hamburger.open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* Mobile: show burger and use full-width dropdown with padding */
+@media (max-width: 900px) {
+  .hamburger { display: inline-block; }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;               /* full width */
+    width: 100vw;
+    background: rgba(0,0,0,0.95);
+    padding: 12px clamp(16px, 4vw, 28px);
+    border-radius: 0;
+    display: grid;
+    gap: .85rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .25s ease, max-height .3s ease;
+  }
+  .menu.open {
+    opacity: 1;
+    max-height: 500px;
+  }
+  .menu a {
+    color: #fff;
+    text-align: left;
+    font-size: 1.05rem;
+    padding: 6px 0;
+  }
+}
+
+/* Desktop: normal inline menu */
+@media (min-width: 901px) {
+  .menu {
+    display: flex;
+    position: static;
+    opacity: 1;
+    max-height: none;
+    background: none;
+    padding: 0;
+    gap: 26px;
   }
 }
 
