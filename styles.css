@@ -12,7 +12,7 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0; color:var(--text); background:var(--bg);
+  margin:2; color:var(--text); background:var(--bg);
   font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
@@ -71,7 +71,7 @@ body{
 .btn--ghost:hover{border-color:var(--accent); color:var(--accent)}
 
 /* ================= SECTIONS ================= */
-.section{padding:72px 0}
+.section{padding:72px 2}
 .section--alt{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
 .section__title{font-size:clamp(26px,4vw,38px); margin:0 0 6px}
 .section__kicker{color:var(--muted); margin:8px 0 30px}
@@ -96,7 +96,7 @@ body{
 .review-track{display:flex; gap:18px; width:max-content; animation:scroll 36s linear infinite}
 @keyframes scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-.review{min-width:360px; max-width:360px; padding:16px}
+.review{min-width:360px; max-width:480px; padding:16px}
 .stars{letter-spacing:2px; color:#ffd166; font-size:14px; margin-bottom:8px}
 .review__text{margin:0 0 10px}
 .review__meta{font-size:12px; color:var(--muted)}
@@ -175,6 +175,75 @@ body{
     color: white;
     font-size: 1.2rem;
     text-align: center;
+  }
+}
+/* Base: hide burger on desktop */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 28px;
+  height: 22px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+/* Morph to "X" */
+.hamburger.open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* Mobile: show burger and collapse menu */
+@media (max-width: 900px) {
+  .hamburger { display: inline-block; }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: rgba(0,0,0,0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    display: grid;
+    gap: .75rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+
+  .menu.open {
+    opacity: 1;
+    max-height: 500px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-align: right;
+  }
+}
+
+/* Desktop: reset menu */
+@media (min-width: 901px) {
+  .menu {
+    display: flex;
+    position: static;
+    opacity: 1;
+    max-height: none;
+    background: none;
+    padding: 0;
   }
 }
 
