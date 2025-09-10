@@ -334,6 +334,26 @@ body{
     gap: 26px;
   }
 }
+.reviews-btn {
+  margin-top: 32px;
+  font-size: 1.05rem;
+  padding: 16px 32px;
+  box-shadow: 0 0 18px rgba(149,205,105,.55);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+  transition: transform .2s ease;
+}
+
+.reviews-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 36px rgba(149,205,105,.85);
+}
+
+/* Keyframes for glowing pulse */
+@keyframes pulseGlow {
+  0%   { box-shadow: 0 0 12px rgba(149,205,105,.45); }
+  50%  { box-shadow: 0 0 28px rgba(149,205,105,.85); }
+  100% { box-shadow: 0 0 12px rgba(149,205,105,.45); }
+}
 
 /* ================= REVEAL (IntersectionObserver) ================= */
 .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease}
