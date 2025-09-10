@@ -363,11 +363,22 @@
 
   <!-- tiny JS for reveal on scroll (keeps CSS clean) -->
   <script>
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => e.isIntersecting && e.target.classList.add('in-view'));
-    }, {threshold: 0.15});
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
 
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      // if the element is the hero title, add glitch-once
+      if (e.target.classList.contains('hero__title')) {
+        e.target.classList.add('glitch-once');
+        io.unobserve(e.target); // ensures glitch runs only once
+      }
+    }
+  });
+}, {threshold: 0.15});
+
+document.querySelectorAll('.reveal, .hero__title').forEach(el => io.observe(el));
+
   </script>
   <script>
 (function () {
