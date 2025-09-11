@@ -6,7 +6,6 @@
   <title>TSIP | Start Your Cybersecurity Consultancy</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg" href="favicon.svg">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3ZTM3H8XH"></script>
   <script>
@@ -18,7 +17,7 @@
 </head>
 <body>
 
-  <!-- ================= NAV ================= -->
+  <!-- NAV -->
   <header class="nav">
     <div class="nav__inner">
       <a href="#home" class="brand">
@@ -40,42 +39,53 @@
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO (with integrated form) -->
   <section id="home" class="hero" style="--hero:url('hero.jpg')">
     <div class="hero__overlay"></div>
+
     <div class="hero__inner container">
-      <h1 class="hero__title glitch-once">
+      <h1 class="hero__title">
         Start Your Cybersecurity Consultancy <span class="accent">Now</span>
       </h1>
 
-      <p class="hero__lead">
-        <span class="strike">$49</span>
-        <span class="free">FREE</span>
-        for a limited time only.<br/>
-        Get the exact playbook with discovery scripts, client proposals, and pricing anchors.
-      </p>
+      <!-- Glass card form -->
+      <form id="mc-form" class="hero-form" novalidate>
+        <div class="hero-card">
+          <p class="price-line">
+            <span class="was">$49</span>
+            <span class="now">FREE</span>
+            <span class="limited">for a limited time only.</span>
+          </p>
+          <p class="sub">
+            Get the exact playbook with discovery scripts, client proposals, and pricing anchors.
+          </p>
 
-      <!-- Glass form card -->
-      <div class="hero-card reveal">
-        <form id="mc-form" class="form" novalidate>
-          <input type="text" name="MMERGE7" placeholder="Your name" autocomplete="name" />
-          <input type="email" name="EMAIL" placeholder="Your email" required autocomplete="email" />
-          <button type="submit" class="btn btn--primary">
-            <span class="btn__icon" aria-hidden="true">🔒</span>
-            Send Me The Ebook
-          </button>
+          <div class="fields">
+            <input type="text" name="MMERGE7" placeholder="Your name" autocomplete="name" />
+            <input type="email" name="EMAIL" placeholder="Your email" required autocomplete="email" />
+            <button type="submit" class="btn btn--cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 12l7 7 11-14" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Send Me The Ebook</span>
+              <span class="shine" aria-hidden="true"></span>
+            </button>
+          </div>
 
-          <small class="muted">We respect your inbox. Unsubscribe anytime. Instant link via email.</small>
-          <div id="mc-status" aria-live="polite"></div>
-        </form>
-      </div>
+          <small class="muted">
+            We respect your inbox. Unsubscribe anytime.
+          </small>
+          <div id="mc-status" aria-live="polite" style="margin-top:10px"></div>
+        </div>
+      </form>
 
       <p class="hero__micro">Limited-time offer. Claim it before the price goes back up.</p>
     </div>
+
     <div class="grain"></div>
   </section>
 
-  <!-- ================= HOW IT WORKS ================= -->
+  <!-- HOW IT WORKS -->
   <section id="how" class="section container">
     <h2 class="section__title">How it Works</h2>
     <p class="section__kicker">Get Ebook → Discovery Calls → Book Clients</p>
@@ -87,8 +97,9 @@
           <div class="step__num">1</div>
           <h3 class="step__title">Download the Playbook</h3>
           <p class="step__desc">
-            Grab the exact framework used by early consultants to package their skills into <em>sellable cybersecurity offers.</em>
-            Includes discovery scripts, pricing anchors and proof assets you can show.
+            Grab the exact framework used by early consultants to package their skills into
+            <em>sellable cybersecurity offers.</em> Includes discovery scripts, pricing anchors
+            and proof assets you can show.
           </p>
         </div>
       </article>
@@ -99,8 +110,8 @@
           <div class="step__num">2</div>
           <h3 class="step__title">Book Discovery Calls</h3>
           <p class="step__desc">
-            Use battle-tested openers and short discovery. You’ll know exactly what to say, what to capture,
-            and how to position your proof so decision-makers say “yes”.
+            Use battle-tested openers and short discovery. You’ll know exactly what to say,
+            what to capture, and how to position your proof so decision-makers say “yes”.
           </p>
         </div>
       </article>
@@ -111,15 +122,15 @@
           <div class="step__num">3</div>
           <h3 class="step__title">Land Your First Client</h3>
           <p class="step__desc">
-            Follow the 14-day execution plan. Run discovery, propose a scoped engagement
-            and close your first cybersecurity client. Momentum beats motivation.
+            Follow the 14-day execution plan. Run discovery, propose a scoped engagement and
+            close your first cybersecurity client. Momentum beats motivation.
           </p>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ================= TESTIMONIALS ================= -->
+  <!-- TESTIMONIALS -->
   <section id="testimonials" class="section section--alt">
     <div class="container">
       <h2 class="section__title">What Learners Say</h2>
@@ -129,91 +140,140 @@
 
       <div class="review-wall">
         <div class="review-track">
-          <!-- (duplicated set for seamless loop) -->
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Excellent career coaching with David. Bought the SIP Systems Audit Template— <strong>17 sheets in one</strong>. Extremely thorough and worth it.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Excellent career coaching with David. Bought the SIP Systems Audit Template—
+              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
+            </p>
             <span class="review__meta">Randy B · Sep 23, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
+              Can’t recommend SIP enough.
+            </p>
             <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Brilliant for learning cybersecurity. Structured content and the live sessions are excellent. Thanks to David for putting this together.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
+              Thanks to David for putting this together.
+            </p>
             <span class="review__meta">james w · Jul 22, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">The best thing ever for me. More confidence, practical experience, and a real path into paid work.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
+            </p>
             <span class="review__meta">Hayley Woodhouse</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Training was way beyond expectations. Also learned how to gain clients as a freelancer. The team at SIP is awesome.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
+              The team at SIP is awesome.
+            </p>
             <span class="review__meta">Kunal Gupte · May 31, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Labs and report writing gave me real-world experience. Confidence up, marketability up. More opportunities opened.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Labs and report writing gave me real-world experience. Confidence up, marketability up.
+              More opportunities opened.
+            </p>
             <span class="review__meta">Michelle King · Oct 4, 2023</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Zero to two paid clients in 10 days. Practical, step-by-step plan.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Zero to two paid clients in 10 days. Practical, step-by-step plan.
+            </p>
             <span class="review__meta">Ravi — Sysadmin</span>
           </article>
 
-          <!-- duplicated set -->
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Excellent career coaching with David. Bought the SIP Systems Audit Template— <strong>17 sheets in one</strong>. Extremely thorough and worth it.</p>
+          <!-- duplicated set for seamless loop -->
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Excellent career coaching with David. Bought the SIP Systems Audit Template—
+              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
+            </p>
             <span class="review__meta">Randy B · Sep 23, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
+              Can’t recommend SIP enough.
+            </p>
             <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Brilliant for learning cybersecurity. Structured content and the live sessions are excellent. Thanks to David for putting this together.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
+              Thanks to David for putting this together.
+            </p>
             <span class="review__meta">james w · Jul 22, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">The best thing ever for me. More confidence, practical experience, and a real path into paid work.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
+            </p>
             <span class="review__meta">Hayley Woodhouse</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Training was way beyond expectations. Also learned how to gain clients as a freelancer. The team at SIP is awesome.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
+              The team at SIP is awesome.
+            </p>
             <span class="review__meta">Kunal Gupte · May 31, 2024</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Labs and report writing gave me real-world experience. Confidence up, marketability up. More opportunities opened.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Labs and report writing gave me real-world experience. Confidence up, marketability up.
+              More opportunities opened.
+            </p>
             <span class="review__meta">Michelle King · Oct 4, 2023</span>
           </article>
 
-          <article class="review card"><div class="stars">★★★★★</div>
-            <p class="review__text">Zero to two paid clients in 10 days. Practical, step-by-step plan.</p>
+          <article class="review card">
+            <div class="stars">★★★★★</div>
+            <p class="review__text">
+              Zero to two paid clients in 10 days. Practical, step-by-step plan.
+            </p>
             <span class="review__meta">Ravi — Sysadmin</span>
           </article>
         </div>
       </div>
 
       <div class="center">
-        <a class="btn btn--primary reviews-btn"
-           href="https://testimonial.to/the-safer-internet-project"
-           target="_blank" rel="noopener">
+        <a class="reviews-btn" href="https://testimonial.to/the-safer-internet-project" target="_blank" rel="noopener">
           Read all reviews →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ================= FOUNDER ================= -->
+  <!-- FOUNDER -->
   <section class="section container founder">
     <div class="founder__media reveal">
       <img src="founder.jpg" alt="David Lee" class="founder__img" />
@@ -225,27 +285,24 @@
       <p class="founder__bio">
         For over 18 years I’ve worked across the IT industry, building the skills to deliver projects quickly,
         efficiently and with a practical, down to earth approach. My focus has always been cybersecurity and
-        automation areas where clarity and precision matter most.
+        automation—areas where clarity and precision matter most.
       </p>
       <p class="founder__bio">
         Along the way I’ve built a YouTube community of more than 60,000 viewers who follow the real day to day
         of an IT professional and look to break into the field the right way. As CEO of TSIP, my job is to help
-        the next wave of cyber professionals turn skills into paid consulting: fast, ethical, repeatable.
+        the next wave of cyber professionals turn skills into paid consulting—fast, ethical, repeatable.
       </p>
+
+      <ul class="trust-bullets">
+        <li>★★★★★ 4.9/5 average from learners</li>
+        <li>60,000+ community reach</li>
+        <li>Instant download via email</li>
+        <li>No spam. Unsubscribe anytime.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ================= TRUST STRIP (replaces empty bottom form) ================= -->
-  <section class="trust-strip section">
-    <div class="container trust__inner">
-      <div class="trust__item">⭐️⭐️⭐️⭐️⭐️ 4.9/5 average from learners</div>
-      <div class="trust__item">60,000+ community reach</div>
-      <div class="trust__item">Instant download via email</div>
-      <div class="trust__item">No spam. Unsubscribe anytime.</div>
-    </div>
-  </section>
-
-  <!-- ================= FAQ ================= -->
+  <!-- FAQ -->
   <section id="faq" class="section container">
     <h2 class="section__title">FAQ</h2>
 
@@ -261,16 +318,15 @@
       <summary>Is the EBook Really Free?</summary>
       <p>
         Yes. This is the exact cybersecurity consultancy starter guide normally sold for $49. For a limited time, you can download it completely free.
-        No hidden upsells, a proven step by step system to help you start freelancing in cybersecurity.
+        No hidden upsells, a proven step-by-step system to help you start freelancing in cybersecurity.
       </p>
     </details>
 
     <details class="faq card reveal">
       <summary>How fast can I land my first cybersecurity client?</summary>
       <p>
-        Most readers who follow the playbook start booking discovery calls in 2–4 weeks.
-        Some land their first paid cybersecurity consulting client in as little as 10 days.
-        The speed comes from using pre-built scripts, engagement templates and pricing anchors, so you’re not wasting time guessing.
+        Most readers who follow the playbook start booking discovery calls in 2–4 weeks. Some land their first paid client in as little as 10 days.
+        The speed comes from using pre-built scripts, engagement templates and pricing anchors—so you’re not wasting time guessing.
       </p>
     </details>
 
@@ -288,13 +344,14 @@
     <details class="faq card reveal">
       <summary>Who should download this cybersecurity consultancy guide?</summary>
       <p>
-        This playbook is built for sysadmins, SOC analysts, students, bootcamp graduates and freelancers who want to turn their technical skills into paid cybersecurity consulting work.
-        Whether you’re aiming for your first client or scaling into a consultancy, this is your starting point.
+        This playbook is built for sysadmins, SOC analysts, students, bootcamp graduates and freelancers who want to turn
+        their technical skills into paid cybersecurity consulting work. Whether you’re aiming for your first client
+        or scaling into a consultancy, this is your starting point.
       </p>
     </details>
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <img src="logo.svg" alt="" class="footer__logo" />
@@ -305,7 +362,7 @@
     </div>
   </footer>
 
-  <!-- Reveal on scroll + one-time glitch -->
+  <!-- Reveal on scroll -->
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -321,12 +378,12 @@
     document.querySelectorAll('.reveal, .hero__title').forEach(el => io.observe(el));
   </script>
 
-  <!-- Mailchimp JSONP submit (same IDs, now in hero) -->
+  <!-- Mailchimp JSONP submit -->
   <script>
     (function () {
       const MC_URL = 'https://saferinternetproject.us21.list-manage.com/subscribe/post-json';
-      const MC_U   = 'e91085aeaa65622a0cb3b4e9e';
-      const MC_ID  = '2726077c0f';
+      const MC_U   = 'e91085aeaa65622a0cb3b4e9e';  // u=
+      const MC_ID  = '2726077c0f';                   // id=
 
       const form   = document.getElementById('mc-form');
       const status = document.getElementById('mc-status');
@@ -375,7 +432,7 @@
     })();
   </script>
 
-  <!-- Burger -->
+  <!-- Mobile menu -->
   <script>
     const burger = document.querySelector('.hamburger');
     const menu   = document.getElementById('site-menu');
