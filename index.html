@@ -11,7 +11,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3ZTM3H8XH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-S3ZTM3H8XH');
   </script>
@@ -49,50 +49,26 @@
       </h1>
 
       <p class="hero__lead">
-        <span style="font-size:1.5rem; font-weight:700; color:#aaa; text-decoration:line-through;">
-          $49
-        </span>
-        <span style="font-size:2rem; font-weight:800; color:#7CFC00; margin-left:8px;">
-          FREE
-        </span>
-        for a limited time only.
-        <br>
+        <span class="strike">$49</span>
+        <span class="free">FREE</span>
+        for a limited time only.<br/>
         Get the exact playbook with discovery scripts, client proposals, and pricing anchors.
       </p>
 
-      <!-- INLINE FORM (MOVED HERE) -->
-      <form id="mc-form" class="form form-inline" novalidate>
-        <!-- Name -->
-        <input
-          type="text"
-          name="MMERGE7"
-          placeholder="Your name"
-          autocomplete="name"
-          aria-label="Your name"
-        />
+      <!-- Glass form card -->
+      <div class="hero-card reveal">
+        <form id="mc-form" class="form" novalidate>
+          <input type="text" name="MMERGE7" placeholder="Your name" autocomplete="name" />
+          <input type="email" name="EMAIL" placeholder="Your email" required autocomplete="email" />
+          <button type="submit" class="btn btn--primary">
+            <span class="btn__icon" aria-hidden="true">🔒</span>
+            Send Me The Ebook
+          </button>
 
-        <!-- Email -->
-        <input
-          type="email"
-          name="EMAIL"
-          placeholder="Your email"
-          required
-          autocomplete="email"
-          aria-label="Your email"
-        />
-
-        <!-- Submit -->
-        <button type="submit" class="btn btn--primary">
-          Send Me The Ebook
-        </button>
-
-        <small class="muted" style="display:block;text-align:center;width:100%">
-          We respect your inbox. No SPAM.
-        </small>
-
-        <!-- Inline status message -->
-        <div id="mc-status" aria-live="polite" style="margin-top:12px;text-align:center"></div>
-      </form>
+          <small class="muted">We respect your inbox. Unsubscribe anytime. Instant link via email.</small>
+          <div id="mc-status" aria-live="polite"></div>
+        </form>
+      </div>
 
       <p class="hero__micro">Limited-time offer. Claim it before the price goes back up.</p>
     </div>
@@ -111,9 +87,8 @@
           <div class="step__num">1</div>
           <h3 class="step__title">Download the Playbook</h3>
           <p class="step__desc">
-            Grab the exact framework used by early consultants to package their skills into
-            <em>sellable cybersecurity offers.</em> Includes discovery scripts, pricing anchors
-            and proof assets you can show.
+            Grab the exact framework used by early consultants to package their skills into <em>sellable cybersecurity offers.</em>
+            Includes discovery scripts, pricing anchors and proof assets you can show.
           </p>
         </div>
       </article>
@@ -152,137 +127,86 @@
         Real stories from early-career cyber professionals who joined TSIP.
       </p>
 
-      <!-- Infinite marquee row -->
       <div class="review-wall">
         <div class="review-track">
-          <!-- duplicate set for seamless loop -->
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Excellent career coaching with David. Bought the SIP Systems Audit Template—
-              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
-            </p>
+          <!-- (duplicated set for seamless loop) -->
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Excellent career coaching with David. Bought the SIP Systems Audit Template— <strong>17 sheets in one</strong>. Extremely thorough and worth it.</p>
             <span class="review__meta">Randy B · Sep 23, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
-              Can’t recommend SIP enough.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.</p>
             <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
-              Thanks to David for putting this together.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Brilliant for learning cybersecurity. Structured content and the live sessions are excellent. Thanks to David for putting this together.</p>
             <span class="review__meta">james w · Jul 22, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">The best thing ever for me. More confidence, practical experience, and a real path into paid work.</p>
             <span class="review__meta">Hayley Woodhouse</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
-              The team at SIP is awesome.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Training was way beyond expectations. Also learned how to gain clients as a freelancer. The team at SIP is awesome.</p>
             <span class="review__meta">Kunal Gupte · May 31, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Labs and report writing gave me real-world experience. Confidence up, marketability up.
-              More opportunities opened.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Labs and report writing gave me real-world experience. Confidence up, marketability up. More opportunities opened.</p>
             <span class="review__meta">Michelle King · Oct 4, 2023</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Zero to two paid clients in 10 days. Practical, step-by-step plan.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Zero to two paid clients in 10 days. Practical, step-by-step plan.</p>
             <span class="review__meta">Ravi — Sysadmin</span>
           </article>
 
-          <!-- duplicated set starts here -->
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Excellent career coaching with David. Bought the SIP Systems Audit Template—
-              <strong>17 sheets in one</strong>. Extremely thorough and worth it.
-            </p>
+          <!-- duplicated set -->
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Excellent career coaching with David. Bought the SIP Systems Audit Template— <strong>17 sheets in one</strong>. Extremely thorough and worth it.</p>
             <span class="review__meta">Randy B · Sep 23, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Landed my first pentesting gig. Hands-on experience whilst working towards my goals.
-              Can’t recommend SIP enough.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Landed my first pentesting gig. Hands-on experience whilst working towards my goals. Can’t recommend SIP enough.</p>
             <span class="review__meta">Abd’ur-Rahman Stevens · Jan 21, 2025</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Brilliant for learning cybersecurity. Structured content and the live sessions are excellent.
-              Thanks to David for putting this together.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Brilliant for learning cybersecurity. Structured content and the live sessions are excellent. Thanks to David for putting this together.</p>
             <span class="review__meta">james w · Jul 22, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              The best thing ever for me. More confidence, practical experience, and a real path into paid work.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">The best thing ever for me. More confidence, practical experience, and a real path into paid work.</p>
             <span class="review__meta">Hayley Woodhouse</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Training was way beyond expectations. Also learned how to gain clients as a freelancer.
-              The team at SIP is awesome.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Training was way beyond expectations. Also learned how to gain clients as a freelancer. The team at SIP is awesome.</p>
             <span class="review__meta">Kunal Gupte · May 31, 2024</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Labs and report writing gave me real-world experience. Confidence up, marketability up.
-              More opportunities opened.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Labs and report writing gave me real-world experience. Confidence up, marketability up. More opportunities opened.</p>
             <span class="review__meta">Michelle King · Oct 4, 2023</span>
           </article>
 
-          <article class="review card">
-            <div class="stars">★★★★★</div>
-            <p class="review__text">
-              Zero to two paid clients in 10 days. Practical, step-by-step plan.
-            </p>
+          <article class="review card"><div class="stars">★★★★★</div>
+            <p class="review__text">Zero to two paid clients in 10 days. Practical, step-by-step plan.</p>
             <span class="review__meta">Ravi — Sysadmin</span>
           </article>
         </div>
       </div>
 
       <div class="center">
-        <a class="btn btn--primary reviews-btn" href="https://testimonial.to/the-safer-internet-project" target="_blank" rel="noopener">
+        <a class="btn btn--primary reviews-btn"
+           href="https://testimonial.to/the-safer-internet-project"
+           target="_blank" rel="noopener">
           Read all reviews →
         </a>
       </div>
@@ -311,19 +235,13 @@
     </div>
   </section>
 
-  <!-- ================= CTA (SEO block; form removed) ================= -->
-  <section id="ebook" class="cta-ebook section">
-    <div class="container cta-ebook__inner">
-      <div class="cta-ebook__copy reveal">
-        <h2 class="section__title">Get the <span class="accent">Ebook</span> Now</h2>
-        <p class="section__kicker">
-          Normally <span style="text-decoration:line-through; color:#aaa;">$49</span> —
-          Get it <span style="color:#7CFC00; font-weight:700;">FREE today</span>.
-          Don’t wait, offer expires soon.
-        </p>
-        <!-- (Form intentionally removed – it’s now in hero) -->
-        <p class="muted">Already joined? Check your inbox for the download link.</p>
-      </div>
+  <!-- ================= TRUST STRIP (replaces empty bottom form) ================= -->
+  <section class="trust-strip section">
+    <div class="container trust__inner">
+      <div class="trust__item">⭐️⭐️⭐️⭐️⭐️ 4.9/5 average from learners</div>
+      <div class="trust__item">60,000+ community reach</div>
+      <div class="trust__item">Instant download via email</div>
+      <div class="trust__item">No spam. Unsubscribe anytime.</div>
     </div>
   </section>
 
@@ -341,14 +259,19 @@
 
     <details class="faq card reveal">
       <summary>Is the EBook Really Free?</summary>
-      <p>Yes. This is the exact cybersecurity consultancy starter guide normally sold for $49. For a limited time, you can download it completely free.
-        No hidden upsells, a proven step by step system to help you start freelancing in cybersecurity.</p>
+      <p>
+        Yes. This is the exact cybersecurity consultancy starter guide normally sold for $49. For a limited time, you can download it completely free.
+        No hidden upsells, a proven step by step system to help you start freelancing in cybersecurity.
+      </p>
     </details>
 
     <details class="faq card reveal">
       <summary>How fast can I land my first cybersecurity client?</summary>
-      <p>Most readers who follow the playbook start booking discovery calls in 2–4 weeks.
-        Some land their first paid cybersecurity consulting client in as little as 10 days. The speed comes from using pre-built scripts, engagement templates and pricing anchors, so you’re not wasting time guessing.</p>
+      <p>
+        Most readers who follow the playbook start booking discovery calls in 2–4 weeks.
+        Some land their first paid cybersecurity consulting client in as little as 10 days.
+        The speed comes from using pre-built scripts, engagement templates and pricing anchors, so you’re not wasting time guessing.
+      </p>
     </details>
 
     <details class="faq card reveal">
@@ -382,14 +305,12 @@
     </div>
   </footer>
 
-  <!-- tiny JS for reveal on scroll (keeps CSS clean) -->
+  <!-- Reveal on scroll + one-time glitch -->
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('in-view');
-
-          // if the element is the hero title, add glitch-once (once)
           if (e.target.classList.contains('hero__title')) {
             e.target.classList.add('glitch-once');
             io.unobserve(e.target);
@@ -397,16 +318,15 @@
         }
       });
     }, {threshold: 0.15});
-
     document.querySelectorAll('.reveal, .hero__title').forEach(el => io.observe(el));
   </script>
 
-  <!-- Mailchimp JSONP submit (unchanged, still targets #mc-form / #mc-status) -->
+  <!-- Mailchimp JSONP submit (same IDs, now in hero) -->
   <script>
     (function () {
       const MC_URL = 'https://saferinternetproject.us21.list-manage.com/subscribe/post-json';
-      const MC_U   = 'e91085aeaa65622a0cb3b4e9e';  // u=
-      const MC_ID  = '2726077c0f';                   // id=
+      const MC_U   = 'e91085aeaa65622a0cb3b4e9e';
+      const MC_ID  = '2726077c0f';
 
       const form   = document.getElementById('mc-form');
       const status = document.getElementById('mc-status');
@@ -425,11 +345,9 @@
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-
         const data = new FormData(form);
         const email = (data.get('EMAIL') || '').trim();
         if (!email) { setStatus('Please enter a valid email.', false); return; }
-
         setStatus('Sending…', true);
 
         const qs = new URLSearchParams();
@@ -451,25 +369,21 @@
 
         const jsonp = document.createElement('script');
         jsonp.src = MC_URL + '?' + qs.toString();
-        jsonp.onerror = function () {
-          setStatus('Network error. Please try again.', false);
-        };
+        jsonp.onerror = function () { setStatus('Network error. Please try again.', false); };
         document.body.appendChild(jsonp);
       });
     })();
   </script>
 
-  <!-- Mobile menu -->
+  <!-- Burger -->
   <script>
     const burger = document.querySelector('.hamburger');
     const menu   = document.getElementById('site-menu');
-
     burger?.addEventListener('click', () => {
       const open = menu.classList.toggle('open');
       burger.classList.toggle('open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   </script>
-
 </body>
 </html>
